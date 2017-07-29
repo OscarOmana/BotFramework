@@ -8,7 +8,6 @@ Así que comencemos por descargar lo necesario para este proyecto.
 * Descarga una plantilla de Visual Studio para comenzar a crear tu propio Bot desde [aquí.](http://aka.ms/bf-bc-vstemplate)
 * Descarga el emulador de bots que podrá funcionar para hacer tus pruebas desde [aquí.](https://github.com/Microsoft/BotFramework-Emulator#download
 )
-* Descarga un cliente de [ngrok.](https://ngrok.com/download) 
 
 
 ## Paso 1:
@@ -29,22 +28,7 @@ Solo presiona F5 y listo. Tendrás tu proyecto compilado. Simple ¿no?
 <img src="Imagenes/bot.png"/>
 
 ## Paso 2:
-Ahora abre una terminal de comandos y dirígete a donde esté el archivo ejecutable que descargaste del tercer enlace.
-
-<img src="Imagenes/ASD.png"/>
- 
-Ya estando ubicado ahí, escribe el siguiente comando: ngrok http -host-header=rewrite 9000
-
-Este comando te permite la posibilidad de abrir un puerto (o varios) a tu localhost, de hecho específicamente abrirás el puerto 9000 que es el que requieres para poder hacer pruebas con tu bot local. Una vez ejecutado el comando, el resultado de tu terminal será algo como esto.
-
-<img src="Imagenes/BotTemplate6-1.jpg"/>
-
- ¿Ves el texto en amarillo? Necesitarás copiar este enlace que será el puente que establecerá la comunicación local con tu bot.
-
-## Paso 3:
 Abre el emulador que ya debiste haber obtenido de tu segundo enlace y claro, instalado. Una vez abierto, necesitarás algunos datos.
-
-La URL del emulador: http ://509eaaa7.ngrok.io (es la obtenida gracias a ngrok).
 
 La URL del bot: http ://localhost:3979/api/messages
 
@@ -52,7 +36,7 @@ Por ahora omite los dos campos en blanco.
 
 Ya configurado, comienza a jugar. Escribe cualquier palabra y el bot te dirá qué escribiste y cuántos caracteres has consumido.
 
-<img src="Imagenes/BotTemplate7.jpg"/>
+<img src="Imagenes/hello.png"/>
 
 
 # Ahora si viene lo divertido!!
@@ -89,7 +73,7 @@ Declaramos nuestras variables globales
             DeviceClient deviceClient;
             string iotHubUri = "tu Uri";
             string deviceKey = "tu key";
-            string deviceId = tu device ID";
+            string deviceId = "tu device ID";
 ~~~
 
 Como puedes ver se trata de todos los objetos que vamos a utilizar durante la aplicación, el valor DeviceClient es el que hará toda la comunicación con el IoT Hub, aquí es donde debes copiar los valores de tu dispositivo IoT creado desde tu Device Explorer. puedes guiarte con este [enlace.](https://github.com/aminespinoza/Ejercicio-Comunicacion-Raspberry-Pi-con-IoT-Hub)
@@ -99,7 +83,7 @@ Ahora sigue el registro de nuestro cliente, para eso usamos esta línea
 ~~~
            deviceClient = DeviceClient.Create(iotHubUri, new DeviceAuthenticationWithRegistrySymmetricKey(deviceId, deviceKey));
 ~~~
-Englobamos los datos que enviaremos al hub en una variable, en mi caso telemetryDataPoint lo serializamos e encriptamos 
+Englobamos los datos que enviaremos al hub en una variable, en mi caso telemetryDataPoint lo serializamos y encriptamos 
 ~~~
 
             var telemetryDataPoint = new
