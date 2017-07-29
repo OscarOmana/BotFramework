@@ -16,9 +16,9 @@ namespace BotSkype
         public static async void SendDataToHub(string light, string handler)
         {
             DeviceClient deviceClient;
-            string iotHubUri = "hubcasatulancingo.azure-devices.net";
-            string deviceKey = "aJpjn3jlGDSlcFrOJqjCxXmHtm8HyBC5HTXr+TQ7pK0=";
-            string deviceId = "maquinaCasa";
+            string iotHubUri = "tu uri";
+            string deviceKey = "tu key";
+            string deviceId = "tu device ID";
 
             //deviceClient = DeviceClient.Create(iotHubUri, AuthenticationMethodFactory.CreateAuthenticationWithRegistrySymmetricKey(deviceId, deviceKey), TransportType.Http1);
             deviceClient = DeviceClient.Create(iotHubUri, new DeviceAuthenticationWithRegistrySymmetricKey(deviceId, deviceKey));
