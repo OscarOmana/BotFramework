@@ -31,7 +31,7 @@ Solo presiona F5 y listo. Tendrás tu proyecto compilado. Simple ¿no?
 # Paso 2:
 Ahora abre una terminal de comandos y dirígete a donde esté el archivo ejecutable que descargaste del tercer enlace.
 
-![Sin titulo](/ASD.png)
+![Sin titulo](/BotFramework/blob/master/Imagenes/ASD.png)
  
 Ya estando ubicado ahí, escribe el siguiente comando: ngrok http -host-header=rewrite 9000
 
@@ -44,14 +44,19 @@ Este comando te permite la posibilidad de abrir un puerto (o varios) a tu localh
 # Paso 3:
 Abre el emulador que ya debiste haber obtenido de tu segundo enlace y claro, instalado. Una vez abierto, necesitarás algunos datos.
 
-La URL del emulador: http://509eaaa7.ngrok.io (es la obtenida gracias a ngrok).
+La URL del emulador: http ://509eaaa7.ngrok.io (es la obtenida gracias a ngrok).
 
-La URL del bot: http://localhost:3979/api/messages
+La URL del bot: http ://localhost:3979/api/messages
 
 Por ahora omite los dos campos en blanco.
 
 Ya configurado, comienza a jugar. Escribe cualquier palabra y el bot te dirá qué escribiste y cuántos caracteres has consumido.
 
+![Sin titulo](/BotTemplate7.jpg)
 
 
+# Ahora si viene lo divertido!!
+Vamos a agregar lo necesario para que nuestro proyecto se pueda comunicar a Microsoft Azure por medio de un IOT Hub
 
+ Para esto vamos a modificar muy poco el proyecto que ya enciende las luces por medio del teléfono. Puedes descargar el proyecto desde este [enlace.](https://github.com/aminespinoza/Proyecto-Miranda/tree/master/Software)
+ 
