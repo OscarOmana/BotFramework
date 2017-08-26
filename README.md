@@ -6,7 +6,7 @@ Pero antes de pasar a lo interesante veamos cómo es que  Microsoft Bot Framewor
 Así que comencemos por descargar lo necesario para este proyecto.
 
 * Descarga una plantilla de Visual Studio para comenzar a crear tu propio Bot desde [aquí.](http://aka.ms/bf-bc-vstemplate)
-* Descarga el emulador de bots que podrá funcionar para hacer tus pruebas desde [aquí.](https://github.com/Microsoft/BotFramework-Emulator#download
+* Descarga el emulador de bots que podrá funcionar para hacer tus pruebas desde [aquí.](https://github.com/Microsoft/BotFramework-Emulator/releases/download/v3.5.31/botframework-emulator-Setup-3.5.31.exe
 )
 
 
